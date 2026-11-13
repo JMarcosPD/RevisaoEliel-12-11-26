@@ -1,4 +1,5 @@
-package com.crud.pessoa.model;
+
+package com.crud.pessoa.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,13 +8,15 @@ import jakarta.persistence.Id;
 
 @Entity
 public class EscolaModel {
-    private Long id;
-    private String nome;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public EscolaModel() {}
+    private String nome;
+
+    public EscolaModel() {
+    }
 
     public Long getId() {
         return id;
@@ -30,6 +33,4 @@ public class EscolaModel {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
 }
